@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definition of simple types -->
+    <xs:simpleType name="YesNoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definition of complex types -->
+    <xs:complexType name="CharsType">
+        <xs:sequence>
+            <xs:element name="Color" type="xs:boolean"/>
+            <xs:element name="NumberOfPages" type="xs:positiveInteger"/>
+            <xs:element name="Glossy" type="xs:boolean"/>
+            <xs:element name="HasSubscriptionIndex" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PaperType">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Type" type="xs:string"/>
+            <xs:element name="Monthly" type="YesNoType"/>
+            <xs:element name="Chars" type="CharsType"/>
+        </xs:sequence>
+        <xs:attribute name="ID" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="Papers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Paper" type="PaperType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="papers.xsd">
+    <Paper ID="p1">
+        <Title>The Daily News</Title>
+        <Type>Newspaper</Type>
+        <Monthly>false</Monthly>
+        <Chars>
+            <Color>true</Color>
+            <NumberOfPages>20</NumberOfPages>
+            <Glossy>false</Glossy>
+            <HasSubscriptionIndex>true</HasSubscriptionIndex>
+        </Chars>
+    </Paper>
+    <Paper ID="p2">
+        <Title>Fashion Trends</Title>
+        <Type>Magazine</Type>
+        <Monthly>true</Monthly>
+        <Chars>
+            <Color>true</Color>
+            <NumberOfPages>50</NumberOfPages>
+            <Glossy>true</Glossy>
+            <HasSubscriptionIndex>true</HasSubscriptionIndex>
+        </Chars>
+    </Paper>
+    <Paper ID="p3">
+        <Title>Local Events</Title>
+        <Type>Brochure</Type>
+        <Monthly>false</Monthly>
+        <Chars>
+            <Color>true</Color>
+            <NumberOfPages>8</NumberOfPages>
+            <Glossy>true</Glossy>
+            <HasSubscriptionIndex>false</HasSubscriptionIndex>
+        </Chars>
+    </Paper>
+</Papers>
